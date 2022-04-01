@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-const Character = ({ count }) => {
+interface CharacterProps {
+  count: number;
+}
+
+const Character = ({ count }: CharacterProps) => {
   const [character, setCharacter] = useState("");
 
   useEffect(() => {
-    const fetchCharacter = (count) =>
+    const fetchCharacter = (count: number) =>
       fetch(`https://rickandmortyapi.com/api/character/${count}`)
         .then((response) => response.json())
         .then((character) => {
