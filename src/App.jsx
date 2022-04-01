@@ -1,6 +1,6 @@
 import React from "react";
 import useCounter from "./hooks/useCounter";
-import Character from "./components/Character";
+import Character from "./components/Character/index.tsx";
 
 const App = () => {
   const [count, increment, decrement] = useCounter(0);
